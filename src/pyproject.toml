@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "template"
+version = "0.1.0"
+description = ""
+authors = [""]
+readme = "README.md"
+
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = {extras = ["all"], version = "^0.105.0"}
+pydantic = {extras = ["dotenv"], version = "^2.1.1"}
+pydantic-settings = "^2.0.2"
+alembic = "^1.11.1"
+sqlalchemy = {extras = ["mypy"], version = "^2.0.15"}
+asyncpg = "^0.27.0"
+inflection = "^0.5.1"
+loguru = "^0.7.0"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.3.1"
+isort = "^5.12.0"
+black = "^23.3.0"
+flake8 = "^6.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.isort]
+profile = "black"
+
+
+[tool.black]
+line-length = 120
